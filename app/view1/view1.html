@@ -1,0 +1,55 @@
+<div class="section no-pad-bot">
+    <div class="container">
+        <br><br>
+
+        <div class="row center">
+            <h5 class="header col s12 light">Choose a local folder, filter files and load them to server.</h5>
+        </div>
+        <div class="row">
+
+            <form class="col s12" action="#">
+                <div class="row">
+                    <div class="file-field input-field col s12 center">
+                        <div class="btn-large waves-effect waves-light">
+                            <span>Choose Directory</span>
+                            <input data-file-on-change="onDirectoryChange" type="file" webkitdirectory mozdirectory
+                                   msdirectory odirectory directory>
+                        </div>
+                        <!--<div class="file-path-wrapper">-->
+                        <!--<input class="file-path validate" type="text">-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </form>
+        </div>
+        <br><br>
+    </div>
+</div>
+
+<div class="container" data-ng-if="files">
+    <div class="section">
+        <div class="row">
+            <div class="input-field col l4 m6 s12">
+                <input rm-datepicker ng-model="date" id="date" type="text" class="validate">
+                <label for="date" class="active">Newer than:</label>
+            </div>
+
+        </div>
+        <ul class="collection with-header">
+            <li class="collection-header"><h4>Files</h4></li>
+            <li data-ng-repeat="file in files | newerThan:date" class="collection-item">
+                <div>{{file.name}}
+                    <a href="#!" class="secondary-content">
+                        <!--<i class="material-icons">access_time</i>-->
+                        <span>{{file.lastModifiedDate | date : 'yyyy-MM-dd'}}</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="input-field col s12">
+                <a disabled class="waves-effect waves-light btn" data-ng-click="notImplemented()">Load to server</a>
+            </div>
+        </div>
+    </div>
+</div>

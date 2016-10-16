@@ -1,0 +1,14 @@
+{
+  "name": "local-files",
+  "description": "Filter files from local computer folder by date",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "angular-loader": "~1.5.0",
+    "angular-mocks": "~1.5.0",
+    "rm-datepicker": "^1.0.0",
+    "materialize": "^0.97.7"
+  }
+}

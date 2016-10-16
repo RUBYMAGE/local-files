@@ -1,0 +1,9 @@
+
+form .btn-large {
+  float:none!important;
+}
+
+.rm-datepicker {
+  top:10px!important;
+  left:0!important;
+}
